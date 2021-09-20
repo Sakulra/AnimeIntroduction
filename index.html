@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <script src="js/fontsize.js"></script>
+</head>
+<body>
+
+    <div class="page page1">
+
+        <div class="pic1 png1"><img src="images/page1.pic1.png" alt=""/></div>
+        <div class="pic2 tu1"><img src="images/tu1.gif" alt=""/></div>
+        <div class="pic3 tu2"><img src="images/tu2.gif" alt=""/></div>
+        <div class="picyun yun"><img src="images/yun2.png" alt=""/></div>
+        <div class="picyun1 yun1"><img src="images/yun1.png" alt=""/></div>
+        <div class="pic6 yun"><img src="images/ppppp.gif" alt=""/></div>
+        <div class="pic7 yun1"><img src="images/ppp.jpg" alt=""/></div>
+
+    </div>
+
+    <div class="page page2 pageDown">
+
+        <p class="animate touming hide" style="margin-top: 0.5rem;"><img src="images/xingxing.png" alt="" class="xz animate infinite"/>中秋起源</p>
+        <div class="xian animate1 suofang hide"><img src="images/xian1.png" alt=""/></div>
+        <p  class="animate touming hide" style="margin-left: 0.93rem"><img src="images/xingxing.png" alt="" class="xz animate infinite"/>中秋习俗</p>
+        <div class="xian animate1 suofang hide"><img src="images/xian2.png" alt=""/></div>
+        <p class="animate touming hide"><img src="images/xingxing.png" alt="" class="xz animate infinite"/>中秋美食</p>
+        <div class="xian animate1 suofang hide"><img src="images/xian1.png" alt=""/></div>
+        <p class="animate touming hide" style="margin-left: 0.93rem"><img src="images/xingxing.png" alt="" class="xz animate infinite"/>中秋诗歌</p>
+
+    </div>
+
+    <div class="page page3 pageDown">
+        
+        <div class="pic1 animate text hide"><img src="images/page3.pic1.png" alt=""/></div>
+        <div class="pic2 animate xz1 hide"><img src="images/page3.pic2.png" alt=""/></div>
+        <div class="picyun yun"><img src="images/yun2.png" alt=""/></div>
+        <div class="picyun1 yun1"><img src="images/yun1.png" alt=""/></div>
+        <div class="pic3"><img src="images/link%20(1).gif" alt=""/></div>
+
+    </div>
+
+    <div class="page page4 pageDown">
+
+        <div class="pic1 animate text hide"><img src="images/page4.pic1.png" alt=""/></div>
+        <div class="pic2 animate xz1 hide"><img src="images/page4.pic2.png" alt=""/></div>
+        <div class="pic3 animate xz1 hide"><img src="images/page4.pic3%20(2).png" alt=""/></div>
+        <div class="pic4 animate suofang hide"><img src="images/page4.pic4.png" alt=""/></div>
+        <div class="pic5 animate suofang hide"><img src="images/page4.pic5.png" alt=""/></div>
+        <div class="pic6 animate suofang hide"><img src="images/page4.pic6.png" alt=""/></div>
+        <div class="pic7 animate suofang hide"><img src="images/page4.pic7.png" alt=""/></div>
+        <div class="pic8 animate suofang hide"><img src="images/page4.pic8.png" alt=""/></div>
+        <div class="pic9 animate suofang hide"><img src="images/page4.pic9.png" alt=""/></div>
+
+    </div>
+
+    <div class="page page5 pageDown">
+
+        <div class="pic1 animate suofang hide"><img src="images/page5.pic1.png" alt=""/></div>
+        <div class="pic2 animate xz1 hide"><img src="images/page5.pic2.png" alt=""/></div>
+        <div class="pic3 animate xz1 hide"><img src="images/page5.pic3.png" alt=""/></div>
+        <div class="pic4  ydleft hide"><img src="images/page5.pic4.png" alt=""/></div>
+        <div class="pic5  ydleft1 hide"><img src="images/page5.pic5.png" alt=""/></div>
+        <div class="pic6  ydleft2 hide"><img src="images/page5.pic6.png" alt=""/></div>
+        <div class="pic7  ydleft3 hide"><img src="images/page5.pic7.png" alt=""/></div>
+        <div class="pic8  ydleft4 hide"><img src="images/page5.pic8.png" alt=""/></div>
+        <div class="pic9  ydleft5 hide"><img src="images/page5.pic9.png" alt=""/></div>
+
+    </div>
+
+    <div class="page page6 pageDown">
+
+        <div class="pic1 ydtop hide"><img src="images/page6.pic1.png" alt=""/></div>
+        <div class="pic2 animate xz1 hide"><img src="images/page.6.pic2.png" alt=""/></div>
+        <div class="pic3 yd hide"><img src="images/page6.pic3.png" alt=""/></div>
+        <div class="pic4 animate text hide"><img src="images/page6.pic4.png" alt=""/></div>
+        <div class="pic5"><img src="images/link.gif" alt=""/></div>
+
+    </div>
+
+
+</body>
+</html>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.min.js"></script>
+
+<script>
+
+    var i=0; //当前页
+    //获取总的页数，适应多个页
+    var pageCount=$(".page").length-1;
+
+    $("body").swipeUp(
+            function () {
+
+                if(i<pageCount){
+                    $(".page").eq(i).addClass("pageUp");
+                    $(".page").eq(i).children().addClass("hide");
+                    i++;  //i=i+1;
+                    $(".page").eq(i).removeClass("pageDown");
+                    $(".page").eq(i).children().removeClass("hide");
+                }
+
+            }
+    );
+    $("body").swipeDown(
+            function () {
+
+                if(i>0){
+                    $(".page").eq(i).addClass("pageDown");
+                    $(".page").eq(i).children().addClass("hide");
+                    i--;  //i=i-1;
+                    $(".page").eq(i).removeClass("pageUp");
+                    $(".page").eq(i).children().removeClass("hide");
+                }
+
+            }
+    )
+
+</script>
+
+
+
+
+
+
+
