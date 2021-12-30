@@ -1,2 +1,1 @@
-This is my personal website. Only used for studying.
-这是我搭建的个人网站。仅用于学习交流
+我个人觉的好看的动漫就收集起来了
