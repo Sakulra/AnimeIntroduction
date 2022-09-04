@@ -2,3 +2,21 @@ div{
       text-align: center;
   }
     
+a{
+    font-size: larger;
+    text-decoration: none;
+    align-content: center;
+
+}
+a:link{
+    background-color: black;
+    color: white;
+}
+a:visited{
+    background-color: black;
+    color: white;
+}
+a:hover{
+    background-color: red;
+    
+}
